@@ -41,9 +41,11 @@ fin_record amount
 
 ## Todo List
 
-- Optimize the construction for json file and logging files.
+- [x] Optimize the construction for json file and logging files.
 
-- Finish analysis module.
+- [ ] Finish analysis module.
+
+- [ ] Add agent mode.
 
 ## Demo
 
