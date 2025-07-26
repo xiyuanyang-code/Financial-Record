@@ -5,10 +5,11 @@ import sys
 sys.path.append(os.getcwd())
 
 from fin_record.logging_info import setup_logging_config
+from fin_record.config import config
 from fin_record.utils import get_date
 
 logger = setup_logging_config()
-FILE_PATH = os.path.join("/home/xiyuanyang/Hodgepodge/Financial_record", "record.json")
+FILE_PATH = config["record_path"]
 
 
 def _open_file(file_path) -> list:

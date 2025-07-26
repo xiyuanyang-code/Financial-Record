@@ -2,6 +2,7 @@ import logging
 import os
 import sys
 
+from fin_record.config import config
 SHARED_LOGGER_NAME = "financial_record"
 
 
@@ -10,14 +11,13 @@ def setup_logging_config():
     if logger.handlers:
         return logger
     logger.setLevel(logging.INFO)
-    log_dir_home = os.path.join("/home/xiyuanyang/Hodgepodge/Financial_record", "log")
-    log_file_path = None
+    log_file_path = config["log_file_path"]
+    log_dir_home = config["log_dir_home"]
+
     try:
         os.makedirs(log_dir_home, exist_ok=True)
-        potential_log_file_path = os.path.join(log_dir_home, "financial.log")
-        with open(potential_log_file_path, "a") as f:
+        with open(log_file_path, "a") as f:
             f.write("")
-        log_file_path = potential_log_file_path
     except OSError as e:
         print(
             f"Warning: Could not create or write to log file at '{log_dir_home}'. Using /tmp instead. Error: {e}",

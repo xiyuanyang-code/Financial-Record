@@ -1,7 +1,6 @@
 import argparse
 import sys
 import os
-
 sys.path.append(os.getcwd())
 
 from fin_record.utils import get_date

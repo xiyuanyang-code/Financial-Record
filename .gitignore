@@ -3,3 +3,4 @@ record.json
 **/__pycache__
 **/build
 **/fin_record.egg-info
+config.yaml

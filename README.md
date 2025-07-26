@@ -1,4 +1,3 @@
-
 # Financial Record
 
 A simple command-line interface (CLI) tool for quickly recording your financial transactions.
@@ -12,12 +11,17 @@ To install the `fin-record` tool, navigate to your project's root directory (whe
 git clone https://github.com/xiyuanyang-code/Financial-Record.git
 cd Financial-Record
 
+# run construct.py for loading config and fixing log_dir
+python construct.py
+
 # install several modules via pip
 pip install .
 ```
 
-> [!TIP]
-> Remember to change the directory of the logging files and json files!
+Or you can simply run `bash run.sh` for simplicity.
+
+> [!WARNING]
+> Remember to run construct.py before install the package!
 
 This will install the tool and make the `fin_record` command available in your terminal.
 
