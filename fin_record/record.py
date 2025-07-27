@@ -67,5 +67,13 @@ def record_money(date: str, money: int):
     logger.info(f"The record process end: DATE {get_date()}")
 
 
+def show_json():
+    with open(FILE_PATH, "r") as file:
+        data = json.load(file)
+        data_string = json.dumps(data, ensure_ascii=False, indent=4)
+    
+    return data_string
+
+
 if __name__ == "__main__":
-    record_money("2025-07-01", 4)
+    show_json()
