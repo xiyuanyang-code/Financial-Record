@@ -28,7 +28,8 @@ def main():
     logger.info("Script started.")
     try:
         number, date, command = get_argparse()
-        command = str(command).strip().lower()
+        if command is not None:
+            command = str(command).strip().lower()
         match command:
             case "ls":
                 print(show_json())
