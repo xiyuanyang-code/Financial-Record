@@ -14,8 +14,8 @@ cd Financial-Record
 # run construct.py for loading config and fixing log_dir
 python construct.py
 
-# install several modules via pip
-pip install .
+# install several modules via pip (using argument -e as recommended)
+pip install -e .
 ```
 
 Or you can simply run `bash run.sh` for simplicity.
@@ -31,12 +31,17 @@ This will install the tool and make the `fin_record` command available in your t
 Record a transaction by providing the amount. The current date will be used automatically.
 
 ```bash
-fin_record amount
+fin_record --number amount
 ```
 
-- record an expense of 1000: `fin_record 1000`
+- record an expense of 1000: `fin_record --number 1000`
 
 - record an expense of 1000 for specific date: `fin_record 1000 --date 2025-09-20`
+
+- show the number of the amount: `fin_record --command ls`
+
+> [!WARNING]
+> The analysis hasn't been finished, it will be updated in the future.
 
 
 ## Todo List
